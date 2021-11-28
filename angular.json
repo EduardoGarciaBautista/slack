@@ -10,7 +10,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         },
         "@schematics/angular:application": {
           "strict": true
@@ -36,6 +36,13 @@
             "styles": [
               "src/styles.sass"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/sass/base",
+                "src/app/sass/themes",
+                "src/app/sass/utils"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

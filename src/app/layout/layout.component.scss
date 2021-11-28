@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'helpers';
+
+.layout-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 50px calc(100vh - 50px);
+  grid-template-areas:
+    "header header"
+    "sidenav main";
+  color: white;
+}
+
+.header {
+  grid-area: header;
+  background-color: $header-color;
+  @extend .border-bottom;
+}
+
+.sidenav {
+  grid-area: sidenav;
+  background-color: $sidenav-color;
+  @extend .border-right;
+}
+
+.main {
+  grid-area: main;
+  background-color: $main-color;
+}
